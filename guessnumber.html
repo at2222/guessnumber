@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вгадай число від 0 до 100</title>
+</head>
+<body>
+    <script>
+      let randomValue = Math.floor(Math.random() * 101); 
+      let count=0;
+
+    while (true) {
+        
+        let number= +prompt("Вгадай число від 0 до 100, введи значення:");
+        
+        if (randomValue>number) 
+        {
+            alert ("Число більше");
+            count++;
+        } 
+        else if (randomValue<number) {
+            alert ("Число меньше");
+            count++;
+        }
+
+        else if (number=randomValue){
+            alert(`Правильно! Було загадано ${randomValue}. Кількість спроб - ${count} `);        
+        }
+    }
+    </script>
+</body>
+</html>
